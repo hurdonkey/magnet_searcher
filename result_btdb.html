@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcEU1FbDBAJXVlRDgIG"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"e28ce04101","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"YVYHYxRQXkcEUEMKWVgcI0IIUkRdCl0YAkZGCRZSB0NTXA==","applicationID":"9983931","errorBeacon":"bam.nr-data.net","applicationTime":94}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>学习 - 学习 Torrent - [1] - 磁力链接 - BT种子下载 - BTDB (BitTorrent Database)</title>
+    <meta name="keywords" content="学习, 学习 下载, 学习 Torrent, BT种子, 磁力链接, 迅雷下载" />
+    <link rel="alternate" hreflang="ru" href="http://ru.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="fr" href="http://fr.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="en" href="http://en.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="zh-Hans" href="http://btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="pt" href="http://pt.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="zh-Hant" href="http://tw.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="hi" href="http://hi.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="ko" href="http://ko.btdb.in/q/学习/" />
+    <link rel="alternate" hreflang="ja" href="http://ja.btdb.in/q/学习/" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//syndication.exoclick.com">
+    <link rel="dns-prefetch" href="//main.exoclick.com">
+    <link rel="dns-prefetch" href="//static-ssl.exoclick.com">
+    <link rel="dns-prefetch" href="//ads.exoclick.com">
+    <link rel="dns-prefetch" href="//c1.popads.net">
+    <link rel="dns-prefetch" href="//c2.popads.net">
+    <link rel="dns-prefetch" href="//serve.popads.net">
+    <link rel="dns-prefetch" href="//hm.baidu.com">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/static/css/style.css?v=571b58c6b578ae73cc3b7748ef790d3b">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="baidu-site-verification" content="XClqlIJ75W" />
+    <script type="text/javascript">
+      var _pop = _pop || [];
+      _pop.push(['siteId', 946862]);
+      _pop.push(['minBid', 0.000000]);
+      _pop.push(['popundersPerIP', 0]);
+      _pop.push(['delayBetween', 0]);
+      _pop.push(['default', false]);
+      _pop.push(['defaultPerDay', 0]);
+      _pop.push(['topmostLayer', false]);
+      (function() {
+        var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+        var s = document.getElementsByTagName('script')[0];
+        pa.src = '//c1.popads.net/pop.js';
+        pa.onerror = function() {
+          var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+          sa.src = '//c2.popads.net/pop.js';
+          s.parentNode.insertBefore(sa, s);
+        };
+        s.parentNode.insertBefore(pa, s);
+      })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="site-wrapper-border"></div>
+        <div class="header">
+            <div class="header-content">
+                <a href="/"><img src="/static/img/logo_40.png" alt="BTDB LOGO" class="logo"></a>
+
+                <div class="search-area">
+                    <form action="/search" method="get" name="f" role="search" accept-charset="utf-8" class="search-form" id="search-form">
+                        <input type="text" id="search-input" aria-label="Search" value="学习" title="BTDB Search" name="q" maxlength="2048" class="search-input" aria-haspopup="false" role="combobox" aria-autocomplete="both" spellcheck="false" autocomplete="off">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div><!-- /.search-area -->
+
+            </div><!-- /.header-content -->
+        </div><!-- /.header -->
+        <div class="toolbar">
+            <span class="sort">排序：</span>
+                <span class="active">相关度</span>
+                <a href="?sort=size">文件大小</a>
+                <a href="?sort=num_files">文件数量</a>
+                <a href="?sort=time">创建时间</a>
+                <a href="?sort=popular">热度</a>
+
+        </div><!-- /.toolbar -->
+
+        <div class="content clearfix">
+            <div class="left-content">
+                <h1 class="hide text-hide">学习 搜索结果, Torrent 磁力链接 BT种子下载</h1>
+                <div class="result-stats">找到约 648 条结果 （用时 0.046 秒）</div>
+                <div class="banner">
+                    <script type="text/javascript">
+                    var ad_idzone = "1732988",
+                        ad_width = "728",
+                        ad_height = "90";
+                    </script>
+                    <script type="text/javascript" src="//ads.exoclick.com/ads.js"></script>
+                    <noscript><a href="http://main.exoclick.com/img-click.php?idzone=1732988" target="_blank"><img src="//syndication.exoclick.com/ads-iframe-display.php?idzone=1732988&output=img&type=728x90" width="728" height="90"></a></noscript>
+                </div>
+
+                <div class="search-ret">
+                    <ul class="search-ret-list">
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/9432DrxNggUN3O2pV94bCPol5orzyziw15r.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:97bc54b3344435fc06ee6d2695eb16fe03648288" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjk3YmM1NGIzMzQ0NDM1ZmMwNmVlNmQyNjk1ZWIxNmZlMDM2NDgyODhaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">6.95 GB</span>
+                                文件数量: <span class="item-meta-info-value">6048</span>
+创建时间: <span class="item-meta-info-value">2013-06-15 11:50:50</span>                                热度: <span class="item-meta-info-value">2</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/会计电算化/第二十次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">228.14 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/会计电算化/第十九次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">227.64 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十九次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">227.64 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十八次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">227.14 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十七次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">227.08 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十六次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">226.58 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十四次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">225.96 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十三次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">225.77 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十二次课/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">225.33 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    会计电算化/会计电算化/第十一次课yoyo/F541张柚炀兴旺实业有限公司.bak
+                                            </span>
+                                            <span class="file-size">224.95 MB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/rmQWvxmg4YIjPZywrYzrS0YBNVgodPhbwq.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:660e01b9a4bafbceb9aa1006d075ee5e01ee154c" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjY2MGUwMWI5YTRiYWZiY2ViOWFhMTAwNmQwNzVlZTVlMDFlZTE1NGNaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">373.24 MB</span>
+                                文件数量: <span class="item-meta-info-value">10</span>
+创建时间: <span class="item-meta-info-value">2015-06-19 11:18:09</span>                                热度: <span class="item-meta-info-value">3</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    1.jpg
+                                            </span>
+                                            <span class="file-size">92.02 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    2.jpg
+                                            </span>
+                                            <span class="file-size">175.67 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    3.jpg
+                                            </span>
+                                            <span class="file-size">15.00 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    4.jpg
+                                            </span>
+                                            <span class="file-size">10.73 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    5.jpg
+                                            </span>
+                                            <span class="file-size">12.25 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    6.jpg
+                                            </span>
+                                            <span class="file-size">9.84 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    7.jpg
+                                            </span>
+                                            <span class="file-size">12.18 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    8.jpg
+                                            </span>
+                                            <span class="file-size">11.77 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习2.rmvb
+                                            </span>
+                                            <span class="file-size">292.53 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习.rmvb
+                                            </span>
+                                            <span class="file-size">80.38 MB</span>
+                                        </li>
+                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/V67Dy2K5pPS5y92xy781fQX6dOND7KUzqm.html" title="学习__"><span class="highlight">学习</span>__</a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:0072d2f31c9aa7d53c134c85ba16a8356bcf38f6" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjAwNzJkMmYzMWM5YWE3ZDUzYzEzNGM4NWJhMTZhODM1NmJjZjM4ZjZaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">2.86 GB</span>
+                                文件数量: <span class="item-meta-info-value">292</span>
+创建时间: <span class="item-meta-info-value">2015-06-24 05:57:20</span>                                热度: <span class="item-meta-info-value">5</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    azunyan_HD02.mp4
+                                            </span>
+                                            <span class="file-size">1.70 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    azunyan_HD01.mp4
+                                            </span>
+                                            <span class="file-size">1.09 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_039.jpg
+                                            </span>
+                                            <span class="file-size">346.70 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_034.jpg
+                                            </span>
+                                            <span class="file-size">346.48 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_246.jpg
+                                            </span>
+                                            <span class="file-size">338.35 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_040.jpg
+                                            </span>
+                                            <span class="file-size">336.43 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_035.jpg
+                                            </span>
+                                            <span class="file-size">336.33 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_024.jpg
+                                            </span>
+                                            <span class="file-size">335.05 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_029.jpg
+                                            </span>
+                                            <span class="file-size">329.41 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    JPG/azunyan_041.jpg
+                                            </span>
+                                            <span class="file-size">328.83 KB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/JmVKqdxQOlHbZwb8qXmwInMaw1B71NS6Vq.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:c1f2c13b9102c526f9d0bc9f21049da215502ae5" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOmMxZjJjMTNiOTEwMmM1MjZmOWQwYmM5ZjIxMDQ5ZGEyMTU1MDJhZTVaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">48.68 GB</span>
+                                文件数量: <span class="item-meta-info-value">112</span>
+创建时间: <span class="item-meta-info-value">2015-01-25 19:07:08</span>                                热度: <span class="item-meta-info-value">8</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _
+                                            </span>
+                                            <span class="file-size">642.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.1
+                                            </span>
+                                            <span class="file-size">1.13 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.2
+                                            </span>
+                                            <span class="file-size">1.10 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.3
+                                            </span>
+                                            <span class="file-size">162.21 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.4
+                                            </span>
+                                            <span class="file-size">2.14 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.5
+                                            </span>
+                                            <span class="file-size">153.56 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.6
+                                            </span>
+                                            <span class="file-size">962.07 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.7
+                                            </span>
+                                            <span class="file-size">162.27 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.8
+                                            </span>
+                                            <span class="file-size">2.29 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.9
+                                            </span>
+                                            <span class="file-size">181.76 KB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/KxWbWnzynzc0loXlaKDKsVJ8oGMV00s68p3.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:75134ea8d7b664804b04846e3fe4e6f91394e8e8" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjc1MTM0ZWE4ZDdiNjY0ODA0YjA0ODQ2ZTNmZTRlNmY5MTM5NGU4ZThaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">9.20 GB</span>
+                                文件数量: <span class="item-meta-info-value">30</span>
+创建时间: <span class="item-meta-info-value">2013-10-15 04:07:34</span>                                热度: <span class="item-meta-info-value">34</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习1.avi
+                                            </span>
+                                            <span class="file-size">478.15 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习02.avi
+                                            </span>
+                                            <span class="file-size">119.91 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习03.avi
+                                            </span>
+                                            <span class="file-size">211.35 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习04.avi
+                                            </span>
+                                            <span class="file-size">44.69 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习 05.avi
+                                            </span>
+                                            <span class="file-size">428.01 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习06.avi
+                                            </span>
+                                            <span class="file-size">668.76 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习 07.avi
+                                            </span>
+                                            <span class="file-size">409.70 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习 08.avi
+                                            </span>
+                                            <span class="file-size">428.62 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习 09.avi
+                                            </span>
+                                            <span class="file-size">428.88 MB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习 10.avi
+                                            </span>
+                                            <span class="file-size">198.91 MB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/rBwpX7aKaKhKD2bVA50EsQg1QX8b5GU6yNj.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:cf93b9fc65b0c7e8d2771ecc4053deb3642079fa" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOmNmOTNiOWZjNjViMGM3ZThkMjc3MWVjYzQwNTNkZWIzNjQyMDc5ZmFaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">2.40 GB</span>
+                                文件数量: <span class="item-meta-info-value">7</span>
+创建时间: <span class="item-meta-info-value">2015-05-29 14:56:33</span>                                热度: <span class="item-meta-info-value">50</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _
+                                            </span>
+                                            <span class="file-size">72.65 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    学习.mp4
+                                            </span>
+                                            <span class="file-size">2.40 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.1
+                                            </span>
+                                            <span class="file-size">483.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.2
+                                            </span>
+                                            <span class="file-size">493.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.3
+                                            </span>
+                                            <span class="file-size">176.65 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.4
+                                            </span>
+                                            <span class="file-size">496.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.5
+                                            </span>
+                                            <span class="file-size">480.00 B</span>
+                                        </li>
+                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/YpDKjWrPzjIWYvqyo3NzU87XYV4M0mIG0Ko.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:4d6fa88df775cc767ee70ade2169cd414969f343" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjRkNmZhODhkZjc3NWNjNzY3ZWU3MGFkZTIxNjljZDQxNDk2OWYzNDNaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">698.22 MB</span>
+                                文件数量: <span class="item-meta-info-value">17</span>
+创建时间: <span class="item-meta-info-value">2015-06-14 11:27:06</span>                                热度: <span class="item-meta-info-value">7</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _
+                                            </span>
+                                            <span class="file-size">375.64 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.1
+                                            </span>
+                                            <span class="file-size">136.36 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.2
+                                            </span>
+                                            <span class="file-size">359.86 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.3
+                                            </span>
+                                            <span class="file-size">152.14 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.4
+                                            </span>
+                                            <span class="file-size">68.86 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.5
+                                            </span>
+                                            <span class="file-size">187.14 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.6
+                                            </span>
+                                            <span class="file-size">55.80 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.7
+                                            </span>
+                                            <span class="file-size">200.20 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.8
+                                            </span>
+                                            <span class="file-size">63.54 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-o"></i></span>
+                                            <span class="file-name">
+                                                    _.9
+                                            </span>
+                                            <span class="file-size">192.46 KB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/yA5P3gdqnqUz9BQyrzymIvr0QmlNJNUqplA.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:992965127ffb4d3d11905718233b6fcf6e80aa64" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjk5Mjk2NTEyN2ZmYjRkM2QxMTkwNTcxODIzM2I2ZmNmNmU4MGFhNjRaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">1.92 GB</span>
+                                文件数量: <span class="item-meta-info-value">2</span>
+创建时间: <span class="item-meta-info-value">2015-01-21 19:16:39</span>                                热度: <span class="item-meta-info-value">9</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    练习.jpg
+                                            </span>
+                                            <span class="file-size">443.49 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    练习.avi
+                                            </span>
+                                            <span class="file-size">1.92 GB</span>
+                                        </li>
+                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/zq3azYv9M2C4X9Avopp8cA654BlbM1i9ggZ.html" title="学习"><span class="highlight">学习</span></a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:5a79c3d71e5145271a6eb57a114db0b62f95d823" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOjVhNzljM2Q3MWU1MTQ1MjcxYTZlYjU3YTExNGRiMGI2MmY5NWQ4MjNaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">4.95 GB</span>
+                                文件数量: <span class="item-meta-info-value">12</span>
+创建时间: <span class="item-meta-info-value">2015-01-25 17:15:58</span>                                热度: <span class="item-meta-info-value">2</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    1111.mkv
+                                            </span>
+                                            <span class="file-size">4.95 GB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    222.jpg
+                                            </span>
+                                            <span class="file-size">142.07 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    11-1.jpg
+                                            </span>
+                                            <span class="file-size">93.23 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    22-10.jpg
+                                            </span>
+                                            <span class="file-size">99.72 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    11.jpg
+                                            </span>
+                                            <span class="file-size">122.13 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    -12.jpg
+                                            </span>
+                                            <span class="file-size">123.34 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    2.jpg
+                                            </span>
+                                            <span class="file-size">91.05 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    000000-3.jpg
+                                            </span>
+                                            <span class="file-size">99.97 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    0000.jpg
+                                            </span>
+                                            <span class="file-size">107.66 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    00000.jpg
+                                            </span>
+                                            <span class="file-size">103.50 KB</span>
+                                        </li>
+...                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                        <li class="search-ret-item">
+                            <h2 class="item-title"><a href="/torrent/0vxbox2wb8fWEmDxQVOgUdYBJjAqP1faZQo.html" title="学习__"><span class="highlight">学习</span>__</a></h2>
+
+                            <div class="item-meta-info">
+                                <a title="通过磁力链接下载" href="magnet:?xt=urn:btih:b69cc792b587f1c316a22be488781fe5ee67b65f" class="magnet" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'magnet-link'])"><i class="fa fa-magnet"></i> 磁力链接</a>
+                                <a title="使用迅雷下载" href="thunder://QUFtYWduZXQ6P3h0PXVybjpidGloOmI2OWNjNzkyYjU4N2YxYzMxNmEyMmJlNDg4NzgxZmU1ZWU2N2I2NWZaWg==" class="thunder" onclick="_hmt.push(['_trackEvent', 'search-result', 'click', 'thunder-link'])"><i class="fa fa-download"></i> 迅雷下载</a>
+                                文件大小: <span class="item-meta-info-value">2.22 GB</span>
+                                文件数量: <span class="item-meta-info-value">7</span>
+创建时间: <span class="item-meta-info-value">2008-07-28 16:47:09</span>                                热度: <span class="item-meta-info-value">4</span>
+                            </div><!-- /.item-meta-info -->
+
+                                <ul class="item-file-list">
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-text-o"></i></span>
+                                            <span class="file-name">
+                                                    3.txt
+                                            </span>
+                                            <span class="file-size">496.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-text-o"></i></span>
+                                            <span class="file-name">
+                                                    12.txt
+                                            </span>
+                                            <span class="file-size">495.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-link"></i></span>
+                                            <span class="file-name">
+                                                    5.url
+                                            </span>
+                                            <span class="file-size">118.00 B</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    88.jpg
+                                            </span>
+                                            <span class="file-size">89.77 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    10.jpg
+                                            </span>
+                                            <span class="file-size">42.03 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-image-o"></i></span>
+                                            <span class="file-name">
+                                                    19.jpg
+                                            </span>
+                                            <span class="file-size">56.79 KB</span>
+                                        </li>
+                                        <li class="file">
+                                            <span class="file-icon"><i class="fa fa-file-video-o"></i></span>
+                                            <span class="file-name">
+                                                    228.avi
+                                            </span>
+                                            <span class="file-size">2.22 GB</span>
+                                        </li>
+                                </ul><!-- /.file-list -->
+                        </li><!-- /.search-ret-item -->
+                    </ul><!-- /.search-ret-list -->
+                </div><!-- /.search-ret -->
+
+                <div class="nav">
+                    <nav role="navigation">
+                        <ul class="pagination">
+                            <li class="button">
+                                <a href="#" class="disabled">上一页</a>
+                            </li>
+                                <li class="button">
+                                    <strong>1</strong>
+                                </li>
+                                <li class="button">
+                                            <a href="2">2</a>
+                                </li>
+                                <li class="button">
+                                            <a href="3">3</a>
+                                </li>
+                                <span class="ellipsis">…</span>
+                                <li class="button">
+                                            <a href="64">64</a>
+                                </li>
+                                <li class="button">
+                                            <a href="65">65</a>
+                                </li>
+
+                            <li class="button">
+                                <a href="2" rel="next">下一页 »</a>
+                            </li>
+                        </ul><!-- /.pagination -->
+                    </nav><!-- /.navigation -->
+                </div><!-- /.nav -->
+
+                <div class="banner-bottom">
+                    <script type="text/javascript">
+                    var ad_idzone = "1732988",
+                        ad_width = "728",
+                        ad_height = "90";
+                    </script>
+                    <script type="text/javascript" src="//ads.exoclick.com/ads.js"></script>
+                    <noscript><a href="http://main.exoclick.com/img-click.php?idzone=1732988" target="_blank"><img src="//syndication.exoclick.com/ads-iframe-display.php?idzone=1732988&output=img&type=728x90" width="728" height="90"></a></noscript>
+                </div>
+
+            </div><!-- /.left-content -->
+
+                <div class="right-content">
+                    <script type="text/javascript">
+                    var ad_idzone = "1732954",
+                        ad_width = "160",
+                        ad_height = "600";
+                    </script>
+                    <script type="text/javascript" src="//ads.exoclick.com/ads.js"></script>
+                    <noscript><a href="http://main.exoclick.com/img-click.php?idzone=1732954" target="_blank"><img src="//syndication.exoclick.com/ads-iframe-display.php?idzone=1732954&output=img&type=160x600" width="160" height="600"></a></noscript>
+                </div><!-- /.right-content -->
+
+        </div><!-- /.content -->
+
+        <div class="footer">
+            <div class="footer-content">
+                <span class="pull-left">
+                    &copy; 2015 BTDB.in | <a href="/cdn-cgi/l/email-protection#45272c31312a3737202b316b2127052228242c296b262a287a3630272f202631780711010765232020212724262e"><span class="__cf_email__" data-cfemail="51333825253e2323343f257f353311363c30383d7f323e3c">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></a>
+                </span>
+
+                <span class="pull-right">
+                    <a href="https://btdb.in">SSL</a> | <a href="/about">关于</a>
+                </span>
+
+            </div>
+        </div><!-- /.footer -->
+    </div><!-- /.container -->
+
+    <script src="/static/js/js.cookie.min.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" src="//syndication.exoclick.com/splash.php?idzone=1732798&type=3"></script> -->
+    <script type="text/javascript" src="//syndication.exoclick.com/splash.php?idzone=1746420&type=16"></script>
+
+    <script type="text/javascript">
+        function formHandler(e) {
+            e.preventDefault();
+            var kw = document.getElementById("search-input").value;
+            if (kw.length !== 0) {
+                Cookies.set('kw', kw, { path: '/' });
+                var url = "/q/" + encodeURIComponent(kw) + "/";
+                window.location = url;
+            }
+        }
+
+        (function() {
+            var form = document.getElementById("search-form");
+            form.focus();
+            if (form.addEventListener) {
+                form.addEventListener("submit", formHandler, false);
+            } else if (form.attachEvent) {
+                form.attachEvent('onsubmit', formHandler, false);
+            }
+        })();
+
+
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?ff1d966a8e2440a3ecc8f22f34e5e29e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63709117-1', 'auto');
+        ga('send', 'pageview');
+
+
+        (function(){
+            var bp = document.createElement('script');
+            bp.src = '//push.zhanzhang.baidu.com/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
